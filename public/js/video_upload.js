@@ -30,6 +30,13 @@ function uploadVideo(customMessage) {
   request.onload = onComplete;
   request.upload.onprogress = fileUploadPercentage;
   const data = new FormData(formElement);
+  const formData = new FormData();
+for (const value of data.values()) {
+  console.log(value);
+}
+
+  console.log(data);
+  console.log(request);
   request.send(data);
 }
 
