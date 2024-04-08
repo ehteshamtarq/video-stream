@@ -26,11 +26,8 @@ module.exports.uploadFile = function (req, res) {
         error: errorMessage,
       });
     }
-    console.log(req.file);
-
-    const fileId = req.file.filename.split("-")[0];
-    const link =
-      "http://" + req.hostname + ":" + process.env.PORT + "/video/" + fileId;
+    const fileId = req.file.filename.split('-')[0];
+    const link = 'http://' + req.hostname  + '/video/' + fileId
 
     res.json({
       success: true,
